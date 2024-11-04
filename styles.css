@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root, *::before, *::after {
+    --serif: "IM Fell English", serif;
+    --sans: "Lato", sans;
+    --primary: #fffff5;
+    --secondary-900: #2f2a1f;
+    --secondary-700: #3c3c44;
+    --secondary-500: #344444;
+    --secondary-100: #738884;
+    --tertiary-900: #57554b;
+    --tertiary-500: #534e35;
+    --tertiary-100: #726a50;
+    --accent-light: #94a494;
+    --accent-dark: #4b7c85;
+}
+
+h2 {
+    font-family: var(--serif);
+    color: var(--secondary-500);
+}
