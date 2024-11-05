@@ -13,9 +13,215 @@
     --tertiary-100: #726a50;
     --accent-light: #94a494;
     --accent-dark: #4b7c85;
+    --accent-blue: #c0dbec;
 }
 
-h2 {
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--sans);
+    scroll-behavior: smooth;
+}
+
+h1, h3, h5 {
     font-family: var(--serif);
-    color: var(--secondary-500);
+}
+
+@media screen and (min-width: 790px) {
+    .spacer {
+        width: 100%;
+        height: 1.5rem;
+    }
+
+    .decorative-bars {
+        margin: 0, auto;
+        display: flex;
+        width: 100%;
+        gap: 0.25rem;
+        justify-content: center;
+    }
+
+    .left-decorative-bar, .right-decorative-bar {
+       width: 40%;
+       height: 0.25rem; 
+    }
+    
+    .left-decorative-bar, .right-decorative-bar {
+       background: linear-gradient(to left, var(--secondary-100), var(--accent-dark)); 
+    }
+    
+    .right-decorative-bar {
+        background: linear-gradient(to left, var(--secondary-500), var(--accent-light));
+    }
+
+    header {
+        margin: 0 auto;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+        margin: 0;
+        padding: 1rem 0;
+        cursor: default; 
+        user-select: none;
+        color: var(--secondary-700);
+    }
+
+    nav ul {
+        display: flex;
+        margin: 0;
+        padding: 1rem 0;
+    }
+
+    nav ul li {
+        color: var(--secondary-700);
+        list-style: none;
+        padding-right: 1.75rem;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    
+    nav ul li a {
+        color: inherit;
+        text-decoration: none;
+        transition: all ease-in-out 250ms;
+    }
+    
+    nav ul li a:hover {
+        color: var(--secondary-100);
+        transition: all ease-in-out 250ms;
+    }
+
+    .hero {
+        width: 100%;
+        height: calc(100vh - 7rem);
+        background-image: url(img/front-metropolitan.png);
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+
+    .hero-text {
+        padding: 2.5rem;
+        width: 30%;
+        height: 30%;
+        margin: auto;
+        backdrop-filter: brightness(75%) blur(2px);
+        color: azure;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        inset: 0;
+        border: solid azure 1px;
+        border-radius: 5px;
+    }
+
+    .hero-text h3 {
+        font-size: 2rem;
+        color: var(--accent-blue);
+    }
+}
+
+footer {
+    background-color: var(--secondary-700);
+    color: azure;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .flex {
+    display: flex;
+}
+
+footer .branding {
+    flex-basis: 40%;
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    color: azure;
+}
+
+.logo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    border: solid azure 2px;
+    width: 6rem;
+    height: fit-content;
+}
+
+.logo h3 {
+    margin: 0;
+    padding: 0.1rem;
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    cursor: default;
+}
+
+footer .flex .right-two-thirds {
+    display: flex;
+    flex-basis: 60%;
+    flex-direction: column;
+}
+
+footer .flex .right-two-thirds .link-lists {
+    display: flex;
+}
+
+footer .flex .right-two-thirds .link-lists section {
+    flex-basis: 25%;
+}
+
+footer .flex .right-two-thirds .link-lists section ul {
+    display: contents;
+}
+
+footer .flex .right-two-thirds .link-lists section ul li {
+    color: gainsboro;
+    list-style: none;
+    padding: 0.25rem 0;
+}
+
+footer .flex .right-two-thirds .link-lists section ul li a {
+    color: inherit;
+    text-decoration: none;
+    transition: all ease-in-out 300ms;
+}
+
+footer .flex .right-two-thirds .link-lists section ul li a:hover {
+    color: var(--accent-light);
+    transition: all ease-in-out 300ms;
+}
+
+.right-two-thirds .social-media {
+    margin: 4rem 0;
+}
+
+.right-two-thirds .social-media a {
+    color: inherit;
+    padding: 0 0.5rem;
+    font-size: clamp(0.9rem, 1.5vw, 2rem);
+    transition: all ease-in-out 300ms;
+}
+
+.right-two-thirds .social-media a:hover {
+    color: var(--accent-blue);
+    transition: all ease-in-out 300ms;
+}
+
+footer .credit {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 0.8rem;
 }
