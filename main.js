@@ -1,3 +1,9 @@
+let hamburger = document.getElementById('hamburger');
+let drawer = document.querySelector('.drawer');
+hamburger.addEventListener('click', () => {
+    drawer.classList.toggle('open');
+})
+
 
 
 let topButton = document.getElementById('to-top');
@@ -18,4 +24,4 @@ searchButton.addEventListener('click', () => dialog.show());
 
 let currentYear = new Date().getFullYear();
 let credit = document.querySelector('.credit');
-credit.textContent = `Particular Baptist Publishing House 2023-${currentYear}.`
+credit.textContent = `Particular Baptist Publications 2023-${currentYear}.`
