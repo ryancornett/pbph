@@ -16,7 +16,12 @@
 
     <body id="top">
         <div class="mobile-banner">
-            <div id="hamburger"></div>
+            <button id="hamburger" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
         </div>
         
         <div class="spacer"></div>
@@ -28,15 +33,13 @@
             <h1>Particular Baptist Publications</h1>
 
             <div class="drawer">
-                <nav>
+                <nav id="main-navigation">
                     <ul>
-                        <li class="navigation"><a href="index.html">Home</a></li>
-                        <li class="navigation"><a href="media.html">Media</a></li>
-                        <li class="navigation"><a href="publications.html">Publications</a></li>
-                        <li class="navigation"><a href="news.html">News</a></li>
-                        <li class="navigation"><a href="bios.html">Bios</a></li>
-                        <li class="navigation"><a href="contact.html">Contact PBP</a></li>
-                        <li class="navigation"><a href="#" id="search-button"><sl-icon name="search"></sl-icon></a></li>
+                        <li class="navigation"><a href="#about">About</a></li>
+                        <li class="navigation"><a href="#publications">Publications</a></li>
+                        <li class="navigation"><a href="#news">News</a></li>
+                        <li class="navigation"><a href="#authors">Authors</a></li>
+                        <li class="navigation"><a href="#foot">Contact PBP</a></li>
                     </ul>
                 </nav>
             </div>
@@ -46,7 +49,7 @@
 
         <article class="hero">
             <div class="hero-text">
-                <h3>Cool tagline is cool.</h3>
+                <h3>Timeless Truths for Today's Church</h3>
                 <h4>Particular Baptist Publications is dedicated to preserving and retrieving the works of our 17th and 18th century Baptist forefathers. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam accusantium in velit sed?</h4>
             </div>
         </article>
@@ -56,10 +59,22 @@
         </div>
 
         <main>
+            <div id="about" class="main-section">
+                <h2>ABOUT PBP</h2>
+            </div>
+            <div id="publications" class="main-section">
+                <h2>PUBLICATIONS</h2>
+            </div>
+            <div id="news" class="main-section">
+                <h2>NEWS</h2>
+            </div>
+            <div id="authors" class="main-section">
+                <h2>AUTHORS</h2>
+            </div>
 
         </main>
         
-        <footer>
+        <footer id="foot">
             <div class="flex">
                 <section class="branding">
                     <div class="logo">
@@ -72,12 +87,11 @@
                         <section class="footer-nav">
                             <h4>Navigation</h4>
                             <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="articles.html">Articles</a></li>
-                                <li><a href="media.html">Media</a></li>
-                                <li><a href="publications.html">Publications</a></li>
-                                <li><a href="bios.html">Bios</a></li>
-                                <li><a href="contact.html">Contact PBPH</a></li>
+                                <li><a href="#top">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#publications">Publications</a></li>
+                                <li><a href="#news">News</a></li>
+                                <li><a href="#authors">Authors</a></li>
                             </ul>
                         </section>
                         <section class="footer-statements">
@@ -86,7 +100,6 @@
                                 <li><a href="1689-confession.html">Faith</a></li>
                                 <li><a href="articles.html">Vision</a></li>
                                 <li><a href="media.html">Mission</a></li>
-                                <li><a href="conflicting-perspectives.html">Conflicting Perspectives</a></li>
                             </ul>
                         </section>
                         <section class="footer-links">
@@ -94,12 +107,12 @@
                             <ul>
                                 <li><a href="accessibility.html">Accessibility</a></li>
                                 <li><a href="acknowledgements.html">Acknowledgements</a></li>
-                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
                                 <li><a href="terms.html">Terms & Conditions</a></li>
                             </ul>
                         </section>
                     </div>
                     <section class="social-media">
+                        <a href="#"><sl-icon name="envelope"></sl-icon></a>
                         <a href="#"><sl-icon name="discord"></sl-icon></a>
                         <a href="#"><sl-icon name="facebook"></sl-icon></a>
                         <a href="#"><sl-icon name="instagram"></sl-icon></a>
@@ -115,14 +128,6 @@
         <div class="search-modal">
 
         </div>
-
-        <sl-dialog label="Search" class="dialog-overview">
-            <div class="search-wrapper">
-                <label for="search"><sl-icon name="search"></sl-icon></label>
-                <input type="search" id="search">
-            </div>
-            Search function not yet implemented. Load bios, articles, and publications for search.
-        </sl-dialog>
 
         <script src="main.js" async defer></script>
         <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.18.0/cdn/shoelace-autoloader.js"></script>

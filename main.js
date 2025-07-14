@@ -1,12 +1,25 @@
-let hamburger = document.getElementById('hamburger');
-let drawer = document.querySelector('.drawer');
+const hamburger = document.getElementById('hamburger');
+const drawer = document.querySelector('.drawer');
+
+// Toggle drawer open/close
 hamburger.addEventListener('click', () => {
-    drawer.classList.toggle('open');
-})
+  const isOpen = drawer.classList.toggle('open');
+  hamburger.classList.toggle('active');
+  hamburger.setAttribute('aria-expanded', isOpen);
+});
+
+// Auto-close when a nav link is clicked
+document.querySelectorAll('.drawer nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    drawer.classList.remove('open');
+    hamburger.classList.remove('active');
+    hamburger.setAttribute('aria-expanded', 'false');
+  });
+});
 
 
 
-let topButton = document.getElementById('to-top');
+const topButton = document.getElementById('to-top');
 function displayTopButton() {
     if (window.scrollY >= 550) {
         topButton.classList.add('visible');
@@ -16,12 +29,6 @@ function displayTopButton() {
 }
 document.addEventListener('scroll', displayTopButton);
 
-const searchButton = document.getElementById('search-button');
-const dialog = document.querySelector('.dialog-overview');
-const closeButton = dialog.querySelector('sl-button[slot="footer"]');
-
-searchButton.addEventListener('click', () => dialog.show());
-
-let currentYear = new Date().getFullYear();
-let credit = document.querySelector('.credit');
+const currentYear = new Date().getFullYear();
+const credit = document.querySelector('.credit');
 credit.textContent = `Particular Baptist Publications 2023-${currentYear}.`
